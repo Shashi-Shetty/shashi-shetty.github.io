@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>/ko/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate><atom:link href="/ko/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>/ko/about/</link>
+      <pubDate>Wed, 09 Oct 2019 11:44:14 +0900</pubDate>
+      
+      <guid>/ko/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photo</title>
+      <link>/ko/gallery/photo/</link>
+      <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>/ko/gallery/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cartoon</title>
+      <link>/ko/gallery/cartoon/</link>
+      <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
+      
+      <guid>/ko/gallery/cartoon/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
