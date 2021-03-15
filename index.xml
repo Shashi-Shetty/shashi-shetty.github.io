@@ -56,6 +56,17 @@ Hugo makes use of a variety of open source projects including:
     </item>
     
     <item>
+      <title></title>
+      <link>/blog/terraform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/terraform/</guid>
+      <description>title = &amp;ldquo;Terraform &amp;quot; description = &amp;quot;&amp;rdquo; author = &amp;ldquo;Shashi Shetty&amp;rdquo; date = &amp;ldquo;2021-03-15&amp;rdquo; tags = [&amp;ldquo;Terraform&amp;rdquo;, &amp;ldquo;Azure&amp;rdquo;, &amp;ldquo;IaC&amp;rdquo;] categories = [&amp;ldquo;Terraform&amp;rdquo;, &amp;ldquo;Azure&amp;rdquo;, &amp;ldquo;Iac&amp;rdquo;] [[images]] src = &amp;ldquo;img/2021/03/terraform.jpg&amp;rdquo; alt = &amp;ldquo;Team&amp;rdquo; stretch = &amp;ldquo;Vertical&amp;rdquo;
++++
+Terraform Introduction Infrastructure as code, popularly known as IaC, is similar to DevOps, where source code would always generate the same result. Infrastructure as code evolved to solve the problem of environment drift in the release pipelines.</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
