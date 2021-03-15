@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/tags/azure/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+  </url><url>
+    <loc>/categories/azure/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+  </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-03-16T00:05:48+05:30</lastmod>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -16,7 +22,7 @@
                 />
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -68,34 +74,8 @@
                 href="/categories/"
                 />
   </url><url>
-    <loc>/tags/css/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/tags/css/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/css/"
-                />
-  </url><url>
-    <loc>/tags/html/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/tags/html/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/html/"
-                />
-  </url><url>
     <loc>/</loc>
-    <lastmod>2021-03-16T00:05:48+05:30</lastmod>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -147,47 +127,14 @@
                 href="/"
                 />
   </url><url>
-    <loc>/tags/markdown/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/tags/markdown/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/tags/markdown/"
-                />
+    <loc>/tags/iac/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
   </url><url>
-    <loc>/blog/markdown-syntax/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/blog/markdown-syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/blog/markdown-syntax/"
-                />
-  </url><url>
-    <loc>/categories/syntax/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/categories/syntax/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/categories/syntax/"
-                />
+    <loc>/categories/iac/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -237,6 +184,80 @@
                 rel="alternate"
                 hreflang="en"
                 href="/tags/"
+                />
+  </url><url>
+    <loc>/tags/terraform/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+  </url><url>
+    <loc>/categories/terraform/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+  </url><url>
+    <loc>/blog/terraform/</loc>
+    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+  </url><url>
+    <loc>/tags/css/</loc>
+    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/tags/css/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/css/"
+                />
+  </url><url>
+    <loc>/tags/html/</loc>
+    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/tags/html/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/html/"
+                />
+  </url><url>
+    <loc>/tags/markdown/</loc>
+    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/tags/markdown/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/markdown/"
+                />
+  </url><url>
+    <loc>/blog/markdown-syntax/</loc>
+    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/blog/markdown-syntax/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/blog/markdown-syntax/"
+                />
+  </url><url>
+    <loc>/categories/syntax/</loc>
+    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/categories/syntax/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/syntax/"
                 />
   </url><url>
     <loc>/tags/themes/</loc>
@@ -358,9 +379,6 @@
                 hreflang="en"
                 href="/about/"
                 />
-  </url><url>
-    <loc>/blog/terraform/</loc>
-    <lastmod>2021-03-16T00:05:48+05:30</lastmod>
   </url><url>
     <loc>/contact/</loc>
     <lastmod>2021-03-15T23:42:45+05:30</lastmod>
