@@ -3,25 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/tags/azure/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
+  </url><url>
+    <loc>/categories/azure/</loc>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/tags/iac/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
+  </url><url>
+    <loc>/categories/iac/</loc>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/tags/terraform/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
+  </url><url>
+    <loc>/categories/terraform/</loc>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/blog/terraform01/</loc>
-    <lastmod>2021-03-15T18:32:14+05:30</lastmod>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/tags/privacy/</loc>
     <lastmod>2021-03-15T15:26:59+05:30</lastmod>
@@ -33,9 +45,7 @@
     <lastmod>2021-03-15T15:26:59+05:30</lastmod>
   </url><url>
     <loc>/about/</loc>
-    <lastmod>2021-03-15T18:46:02+05:30</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
+    <lastmod>2021-03-15T19:19:19+05:30</lastmod>
   </url><url>
     <loc>/contact/</loc>
     <lastmod>2021-03-15T15:26:59+05:30</lastmod>
