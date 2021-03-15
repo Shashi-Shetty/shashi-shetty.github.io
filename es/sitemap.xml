@@ -106,6 +106,29 @@
                 href="/es/categories/"
                 />
   </url><url>
+    <loc>/es/contact/</loc>
+    <lastmod>2021-03-15T20:04:14+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="/de/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/contact/"
+                />
+  </url><url>
     <loc>/es/tags/</loc>
     <xhtml:link
                 rel="alternate"
