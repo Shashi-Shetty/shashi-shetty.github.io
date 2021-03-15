@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
   <meta charset="utf-8">
-<title>Terraform - Hugo Future Imperfect Slim</title>
+<title>Infrastructure as code using Terraform - Part 1 - Hugo Future Imperfect Slim</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <meta name="generator" content="Hugo 0.81.0" /><meta property="og:site_name" content="Hugo Future Imperfect Slim">
-  <meta property="og:title" content="Terraform">
-  <meta property="og:description" content="Introduction to Terraform and Iac.">
-  <meta property="description" content="Introduction to Terraform and Iac.">
+  <meta property="og:title" content="Infrastructure as code using Terraform - Part 1">
+  <meta property="og:description" content="Series of blog posts on Terraform.">
+  <meta property="description" content="Series of blog posts on Terraform.">
   <meta property="og:url" content="/blog/terraform/">
   <meta property="og:type" content="article">
   
@@ -124,7 +124,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Terraform&amp;url=%2fblog%2fterraform%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201&amp;url=%2fblog%2fterraform%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -136,19 +136,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=%2fblog%2fterraform%2f&amp;title=Terraform" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=%2fblog%2fterraform%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fterraform%2f&amp;title=Terraform" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fterraform%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fterraform%2f&amp;description=Terraform" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fterraform%2f&amp;description=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -231,10 +231,10 @@
     <header>
   <div class="title">
     
-      <h2><a href="/blog/terraform/">Terraform</a></h2>
+      <h2><a href="/blog/terraform/">Infrastructure as code using Terraform - Part 1</a></h2>
     
     
-      <p>Introduction to Terraform and Iac.</p>
+      <p>Series of blog posts on Terraform.</p>
     
   </div>
   <div class="meta">
@@ -252,7 +252,7 @@
 
   
     
-    <a href="//twitter.com/share?text=Terraform&amp;url=%2fblog%2fterraform%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+    <a href="//twitter.com/share?text=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201&amp;url=%2fblog%2fterraform%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
         <p>Twitter</p>
       </a>
   
@@ -264,19 +264,19 @@
   
 
   
-    <a href="//www.reddit.com/submit?url=%2fblog%2fterraform%2f&amp;title=Terraform" target="_blank" rel="noopener" class="nav share-btn reddit">
+    <a href="//www.reddit.com/submit?url=%2fblog%2fterraform%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn reddit">
           <p>Reddit</p>
         </a>
   
 
   
-        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fterraform%2f&amp;title=Terraform" target="_blank" rel="noopener" class="nav share-btn linkedin">
+        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fterraform%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn linkedin">
             <p>LinkedIn</p>
           </a>
   
 
   
-        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fterraform%2f&amp;description=Terraform" target="_blank" rel="noopener" class="nav share-btn pinterest">
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fterraform%2f&amp;description=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%201" target="_blank" rel="noopener" class="nav share-btn pinterest">
           <p>Pinterest</p>
         </a>
   
@@ -294,18 +294,18 @@
     <img class="stretchH" src="/img/2021/03/terraform.jpg" alt="Mountain Range Through Clouds">
   </a>
       <h1 id="terraform-introduction">Terraform Introduction</h1>
-<p>Infrastructure as code, popularly known as <strong>IaC</strong>, is similar to DevOps, where source code would always generate the same result. Infrastructure as code evolved to solve the problem of <em>environment drift</em> in the release pipelines. Inconsistency among environments leads to issues during deployments. Without IaC, Administration and infrastructure maintenance involve manual processes that are hard to track and contributed to errors.</p>
-<p>The most popular tools used for Iac are Azure ARM and Terraform. As the name suggests, Azure ARM is meant only for Azure Cloud infra; however, Terraform supports multiple cloud Infrastructure, VMware, and on-prem Infrastructure. Both the tools have their advantage and disadvantages. In both cases, administrators needs to spend some time to understand the syntax and nuances.</p>
+<p>Infrastructure as code, popularly known as <strong>IaC</strong>, adopted by industry through DevOps, the key reason being source code would always generate the same result. Infrastructure as code evolved to solve the problem of <em>environment drift</em> in the release pipelines. Inconsistency among environments leads to issues during deployments. Without <strong>IaC</strong>, administration and infrastructure maintenance involves manual processes that are hard to track and contributed to errors.</p>
+<p>The most popular tools used for <strong>Iac</strong> are Azure ARM and Terraform. As the name suggests, Azure ARM is intended for Azure Cloud infra; however, Terraform supports multi cloud Infrastructure, VMware, and on-prem Infrastructure. Both the tools have their advantage and disadvantages. In both cases, administrators needs to spend some time to understand the syntax and nuances.</p>
 <p>Terraform is a preferred tool for IaC as most organizations use more than one cloud to host their resources. Some of the advantages of Terraform are</p>
 <ul>
 <li>Ease of understanding</li>
 <li>Multi-cloud support</li>
 <li>Code versioning</li>
-<li>Statefile of configuration</li>
+<li>Statefile</li>
 <li>Workspace to separate different stacks</li>
 <li>Inbuilt dependency calculation</li>
 <li>Parallel execution capability</li>
-<li>One-click deployments and decommissions</li>
+<li>One-click  or auto deployments and decommissions</li>
 </ul>
 <p>A typical Terraform code has the following components</p>
 <ul>
@@ -315,7 +315,8 @@
 <li>Resources</li>
 <li>Output</li>
 </ul>
-<p>Let go through a simple example of creating a resource group. What do we need first? Before you start coding, you need a valid Azure subscription and credentials to create the required resources. You can use either PowerShell, azure shell, or visual studio editor. The cool feature of Terraform is, it doesn&rsquo;t need administrators to install the software. You can directly start coding in the local system or the Azure shell. In this post, I am using the visual studio editor.</p>
+<p>Let us go through a simple example of creating a resource group. What do we need first? Before you start coding, you need a valid Azure account and authorization  to create the required resources. You can use either PowerShell, azure cloud shell. You can directly start coding in the local system or using the Azure cloud shell. In this post, I am using the visual studio editor.</p>
+<p>You can follow the installation instructions at <a href="https://learn.hashicorp.com/tutorials/terraform/install-cli">link</a></p>
 <p>Under the <strong>variable</strong> section, define the Resource Group Name and location. <strong>{}</strong> indicate the actual value of the variables are in the VAR file. The point to remember here is the file name needs to be <em>terraform.tfvars</em></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#############################################################################</span>
 <span style="color:#75715e"># VARIABLES</span>
@@ -326,7 +327,7 @@ variable <span style="color:#e6db74">&#34;location&#34;</span> {}
 </code></pre></div><p>Example of Var File</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">RGname = <span style="color:#e6db74">&#34;test-group&#34;</span>
 location = <span style="color:#e6db74">&#34;eastus&#34;</span>
-</code></pre></div><p><strong>Provider</strong> is nothing but the plugin the Terraform needs to import before executing the code; in our case, it’s Azure. ~&gt; indicated the azurerm version needs to be greater than 1.0</p>
+</code></pre></div><p><strong>Provider</strong> is nothing but the plugin the Terraform needs to import before executing the code; in our case, it’s Azure. <strong>~&gt;</strong> indicated the azurerm version needs to be greater than 1.0</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#############################################################################</span>
 <span style="color:#75715e"># PROVIDERS</span>
 <span style="color:#75715e">#############################################################################</span>
@@ -337,7 +338,7 @@ provider <span style="color:#960050;background-color:#1e0010">“</span>azurerm<
 
  version = <span style="color:#960050;background-color:#1e0010">“</span>~&gt; 1.0.<span style="color:#960050;background-color:#1e0010">”</span>
 }
-</code></pre></div><p><strong>Resources</strong> is the section you would create the actual resource . Here we are stating the resource type is “azurerm_resource_group,” and <em>Rname</em> refers to this resource in the code. What do you need for a resource group? Its name and the location. Name we are referring to <em>RGname</em>, which is of type Variable. Lets say your company has a mandatory rule to have all the resource names in lower case , this is where you use inbuilt terraform funtions . the code would look like – “name = lower(var.RGname)”</p>
+</code></pre></div><p><strong>Resources</strong> is the section you would create the actual resource . Here we are stating  resource group  &ldquo;<em>Rname</em> &quot; with the resource type as “azurerm_resource_group,” . Name and the location are the two mandatory properties to create  a resource group. Name is populated using the value of declared variable <em>RGname</em>, which is of type string with allowed special characters. Lets say your company has a mandatory rule to have all the resource names in lower case , this is where you use inbuilt terraform functions . The code would look like – “name = lower(var.RGname)”</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e">#############################################################################</span>
 <span style="color:#75715e"># RESOURCES</span>
 <span style="color:#75715e">#############################################################################</span>
@@ -599,7 +600,7 @@ PS D:\Terraform\blab&gt;
     <img class="stretchH" src="/img/2021/03/terraform.jpg" alt="Mountain Range Through Clouds">
   </a>
         <header>
-          <h2><a href="/blog/terraform/">Terraform</a></h2>
+          <h2><a href="/blog/terraform/">Infrastructure as code using Terraform - Part 1</a></h2>
           <time class="published" datetime="2021-03-15 00:00:00 &#43;0000 UTC">March 15, 2021</time>
         </header>
       </article>
