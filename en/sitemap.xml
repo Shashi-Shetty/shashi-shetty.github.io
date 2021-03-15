@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2021-03-15T16:27:04+05:30</lastmod>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -55,20 +55,17 @@
                 href="/"
                 />
   </url><url>
+    <loc>/tags/azure/</loc>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
+  </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-03-15T16:27:04+05:30</lastmod>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
   </url><url>
-    <loc>/blog/hello-world/</loc>
-    <lastmod>2021-03-15T16:27:04+05:30</lastmod>
-  </url><url>
-    <loc>/tags/privacy/</loc>
-    <lastmod>2021-03-15T16:27:04+05:30</lastmod>
-  </url><url>
-    <loc>/tags/shortcodes/</loc>
-    <lastmod>2021-03-15T16:27:04+05:30</lastmod>
+    <loc>/tags/iac/</loc>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-03-15T16:27:04+05:30</lastmod>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -120,11 +117,23 @@
                 href="/tags/"
                 />
   </url><url>
+    <loc>/tags/terraform/</loc>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
+  </url><url>
+    <loc>/blog/hello-world/</loc>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
+  </url><url>
+    <loc>/tags/privacy/</loc>
+    <lastmod>2021-03-15T15:26:59+05:30</lastmod>
+  </url><url>
     <loc>/blog/rich-content/</loc>
     <lastmod>2021-03-15T15:26:59+05:30</lastmod>
   </url><url>
+    <loc>/tags/shortcodes/</loc>
+    <lastmod>2021-03-15T15:26:59+05:30</lastmod>
+  </url><url>
     <loc>/about/</loc>
-    <lastmod>2021-03-15T16:52:13+05:30</lastmod>
+    <lastmod>2021-03-15T18:10:38+05:30</lastmod>
   </url><url>
     <loc>/categories/</loc>
     <xhtml:link
