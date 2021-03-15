@@ -2,6 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/about/</loc>
+    <lastmod>2021-03-15T23:12:07+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl"
+                href="/pl/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="pt"
+                href="/pt/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/about/"
+                />
+  </url><url>
     <loc>/</loc>
     <lastmod>2021-03-15T20:04:14+05:30</lastmod>
     <xhtml:link
@@ -346,29 +369,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="/blog/emoji-support/"
-                />
-  </url><url>
-    <loc>/about/</loc>
-    <lastmod>2021-03-15T23:11:32+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/about/"
                 />
   </url><url>
     <loc>/contact/</loc>

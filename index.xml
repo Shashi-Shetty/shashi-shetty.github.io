@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>I am Shashi, I have been an IT Infrastructure engineer since 2008. I have worked predominately on virtualization, as the blog name indicates. I had an opportunity to work on multiple virtualization technologies, including VMware virtualization, Hyper V, Azure Cloud. When it comes to security products, I have good knowledge about Symantec endpoint protection and Gemalto encryption.
+ Microsoft Certified: Azure Solutions Architect Expert Exam AZ-303: Microsoft Azure Architect Technologies Exam 742: Identity with Windows Server 2016 VMware Certified Professional- Data Center Virtualization  What you can expect from this blog ?</description>
+    </item>
+    
+    <item>
       <title>Terraform </title>
       <link>/blog/terraform01/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
@@ -52,16 +62,6 @@ pectora summo.&lt;/p&gt;</description>
       
       <guid>/blog/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>I am Shashi, I have been an IT Infrastructure engineer since 2008. I have worked predominately on virtualization, as the blog name indicates. I had an opportunity to work on multiple virtualization technologies, including VMware virtualization, Hyper V, Azure Cloud. When it comes to security products, I have good knowledge about Symantec endpoint protection and Gemalto encryption.
- Microsoft Certified: Azure Solutions Architect Expert Exam AZ-303: Microsoft Azure Architect Technologies Exam 742: Identity with Windows Server 2016 VMware Certified Professional- Data Center Virtualization  What you can expect from this blog ?</description>
     </item>
     
     <item>
