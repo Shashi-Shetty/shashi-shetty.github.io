@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/tags/azure/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
   </url><url>
     <loc>/categories/azure/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
   </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -22,7 +22,7 @@
                 />
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -75,7 +75,7 @@
                 />
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -127,14 +127,11 @@
                 href="/"
                 />
   </url><url>
-    <loc>/tags/iac/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
-  </url><url>
-    <loc>/categories/iac/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <loc>/tags/ioc/</loc>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -187,13 +184,13 @@
                 />
   </url><url>
     <loc>/tags/terraform/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
   </url><url>
     <loc>/categories/terraform/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
   </url><url>
     <loc>/blog/terraform/</loc>
-    <lastmod>2021-03-16T00:12:53+05:30</lastmod>
+    <lastmod>2021-03-16T00:20:55+05:30</lastmod>
   </url><url>
     <loc>/tags/css/</loc>
     <lastmod>2021-03-15T23:42:45+05:30</lastmod>
