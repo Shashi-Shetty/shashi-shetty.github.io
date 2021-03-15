@@ -18,6 +18,15 @@ The most popular tools used for Iac are Azure ARM and Terraform.</description>
     </item>
     
     <item>
+      <title>Markdown Syntax Guide</title>
+      <link>/blog/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Rich Content</title>
       <link>/blog/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
@@ -27,13 +36,32 @@ The most popular tools used for Iac are Azure ARM and Terraform.</description>
     </item>
     
     <item>
-      <title>About Me</title>
+      <title>Placeholder Text</title>
+      <link>/blog/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
+pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>/blog/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About</title>
       <link>/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>I am Shashi, I have been an IT Infrastructure engineer since 2008. I have worked predominately on virtualization, as the blog name indicates. I had an opportunity to work on multiple virtualization technologies, including VMware virtualization, Hyper V, Azure Cloud. When it comes to security products, I have good knowledge about Symantec endpoint protection and Gemalto encryption.
- Microsoft Certified: Azure Solutions Architect Expert Exam AZ-303: Microsoft Azure Architect Technologies Exam 742: Identity with Windows Server 2016 VMware Certified Professional- Data Center Virtualization  What you can expect from this blog ?</description>
+      <description>&amp;laquo;&amp;laquo;&amp;laquo;&amp;lt; HEAD Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hugo makes use of a variety of open source projects including:</description>
     </item>
     
     <item>
