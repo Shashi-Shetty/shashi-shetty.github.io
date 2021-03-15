@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/azure/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terraform </title>
-      <link>/blog/hello-world/</link>
+      <link>/blog/terraform01/</link>
       <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
       
-      <guid>/blog/hello-world/</guid>
+      <guid>/blog/terraform01/</guid>
       <description>Terraform Introduction Infrastructure as code, popularly known as IaC, is similar to DevOps, where source code would always generate the same result. Infrastructure as code evolved to solve the problem of environment drift in the release pipelines. Inconsistency among environments leads to issues during deployments. Without IaC, Administration and infrastructure maintenance involve manual processes that are hard to track and contributed to errors.
 The most popular tools used for Iac are Azure ARM and Terraform.</description>
     </item>
