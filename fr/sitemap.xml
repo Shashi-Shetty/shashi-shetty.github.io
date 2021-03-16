@@ -329,28 +329,5 @@
                 hreflang="fr"
                 href="/fr/blog/emoji-support/"
                 />
-  </url><url>
-    <loc>/fr/about/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/about/"
-                />
   </url>
 </urlset>

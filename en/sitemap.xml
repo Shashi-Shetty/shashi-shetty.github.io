@@ -3,27 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/about/</loc>
-    <lastmod>2021-03-16T01:20:55+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pl"
-                href="/pl/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="/pt/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/about/"
-                />
+    <lastmod>2021-03-16T11:38:40+05:30</lastmod>
   </url><url>
     <loc>/tags/azure/</loc>
     <lastmod>2021-03-16T01:12:31+05:30</lastmod>
