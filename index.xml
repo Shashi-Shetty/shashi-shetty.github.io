@@ -6,7 +6,18 @@
     <description>Recent content on about-virtualization.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Infrastructure as code using Terraform - Part 2</title>
+      <link>/blog/terraform02/</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/terraform02/</guid>
+      <description>Terraform Workspace
+Terraform Workspace provides you an option to create dedicated runtime stacks for each of your environments. For instance, the requirement is to create a Resource group based on project code for UAT and Prod environments. One of the ways to achieve this is using terraform workspace with a single code.
+A Workspace is created using terraform workspace new workspace_name. To list the workspace, you can use the &amp;ldquo;list&amp;rdquo; option.</description>
+    </item>
+    
     <item>
       <title>About Me</title>
       <link>/about/</link>
@@ -26,43 +37,6 @@ Certifications:
       <guid>/blog/terraform/</guid>
       <description>Terraform Introduction Infrastructure as code, popularly known as IaC, adopted by industry through DevOps, the key reason being source code would always generate the same result. Infrastructure as code evolved to solve the problem of environment drift in the release pipelines. Inconsistency among environments leads to issues during deployments. Without IaC, administration and infrastructure maintenance involves manual processes that are hard to track and contributed to errors.
 The most popular tools used for Iac are Azure ARM and Terraform.</description>
-    </item>
-    
-    <item>
-      <title>Markdown Syntax Guide</title>
-      <link>/blog/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Rich Content</title>
-      <link>/blog/rich-content/</link>
-      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/rich-content/</guid>
-      <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugo-s-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Placeholder Text</title>
-      <link>/blog/placeholder-text/</link>
-      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/placeholder-text/</guid>
-      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de
-pectora summo.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Emoji Support</title>
-      <link>/blog/emoji-support/</link>
-      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/emoji-support/</guid>
-      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     
     <item>

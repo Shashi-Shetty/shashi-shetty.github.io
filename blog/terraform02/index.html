@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Infrastructure as code using Terraform - Part 2 - about-virtualization.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.81.0" /><meta property="og:site_name" content="about-virtualization.com">
+  <meta property="og:title" content="Infrastructure as code using Terraform - Part 2">
+  <meta property="og:description" content="Series of blog posts on Terraform.">
+  <meta property="description" content="Series of blog posts on Terraform.">
+  <meta property="og:url" content="/blog/terraform02/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="/img/2021/03/terraform.jpg">
+      <meta property="og:image:alt" content="Mountain Range Through Clouds">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.7af44880fa8f2867fbbf1b1e6758774b791bf321699b23f84be69e26e842c64a.css" integrity="sha256-evRIgPqPKGf7vxseZ1h3S3kb8yFpmyP4S&#43;aeJuhCxko="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
+      
+    
+      
+        <a href="/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
+      
+    
+      
+        <a href="/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
+      
+    
+      
+        <a href="/es" lang="es" class="nav no-lang link">Española (es)</a>
+      
+    
+      
+        <a href="/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (简体) (zh-cn)</a>
+      
+    
+      
+        <a href="/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (正體) (zh-tw)</a>
+      
+    
+      
+        <a href="/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
+      
+    
+      
+        <a href="/nl" lang="nl" class="nav no-lang link">Nederlands (nl)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202&amp;url=%2fblog%2fterraform02%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fterraform02%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=%2fblog%2fterraform02%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fterraform02%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fterraform02%2f&amp;description=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Shashi%20Shetty&amp;body=%2fblog%2fterraform02%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Shashi Shetty</h1>
+  </header>
+  <main>
+    <p>Opinions Are My Own.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//www.linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+<li><a href="//www.pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/terraform02/">Infrastructure as code using Terraform - Part 2</a></h2>
+    
+    
+      <p>Series of blog posts on Terraform.</p>
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-03-16 00:00:00 &#43;0000 UTC">March 16, 2021</time>
+    <p>Shashi Shetty</p>
+    <p>3-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202&amp;url=%2fblog%2fterraform02%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2fterraform02%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=%2fblog%2fterraform02%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2fterraform02%2f&amp;title=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2fterraform02%2f&amp;description=Infrastructure%20as%20code%20using%20Terraform%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Shashi%20Shetty&amp;body=%2fblog%2fterraform02%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/terraform02/" class="image" style="--bg-image: url('/img/2021/03/terraform.jpg');">
+    <img class="stretchH" src="/img/2021/03/terraform.jpg" alt="Mountain Range Through Clouds">
+  </a>
+      <p><strong>Terraform Workspace</strong></p>
+<p>Terraform Workspace provides you an option to create dedicated runtime stacks for each of your environments. For instance, the requirement is to create a Resource group based on project code for UAT and Prod environments. One of the ways to achieve this is using terraform workspace with a single code.</p>
+<p>A Workspace is created using <strong>terraform workspace new workspace_name.</strong> To list the workspace, you can use the &ldquo;<em>list</em>&rdquo; option. * indicates the current workspace. To switch to a different workspace, use the  “<em>select</em>” option.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\content-management\blog&gt; terraform workspace new prod
+Created and switched to workspace <span style="color:#e6db74">&#34;prod&#34;</span>!
+
+You<span style="color:#960050;background-color:#1e0010">&#39;</span>re now on a new, empty workspace. Workspaces isolate their state,   
+so <span style="color:#66d9ef">if</span> you run <span style="color:#e6db74">&#34;terraform plan&#34;</span> Terraform will not see any existing state
+<span style="color:#66d9ef">for</span> this configuration.
+
+PS C:\content-management\blog&gt; terraform workspace list    
+  <span style="color:#66d9ef">default</span>
+* prod   
+</code></pre></div><p>In this example, I am creating the resource group based on the workspace, i.e., Prod and UAT. I am using the local variable to achieve this. The result would be two resource groups Prod-XYZ and UAT-XYZ . The sample code is enclosed below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">variable <span style="color:#e6db74">&#34;ProjectCode&#34;</span> {
+type = string
+<span style="color:#66d9ef">default</span> = <span style="color:#e6db74">&#34;XYZ&#34;</span>
+}
+variable <span style="color:#e6db74">&#34;location&#34;</span> {
+type = string
+<span style="color:#66d9ef">default</span> = <span style="color:#e6db74">&#34;eastus&#34;</span>
+}
+locals {
+RG = <span style="color:#e6db74">&#34;${terraform.workspace}-${var.ProjectCode}&#34;</span>
+}
+
+</code></pre></div><p>Code for actual resource creation based on Workspace .</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">resource <span style="color:#e6db74">&#34;azurerm_resource_group&#34;</span> <span style="color:#e6db74">&#34;RGname&#34;</span> {
+name = local.RG
+location = var.location
+}
+</code></pre></div><p>Result post running the code in Prod and UAT workspace</p>
+<pre><code>PS D:\Terraform\blogLabs\02-workspace&gt; terraform apply .\uat.tfplan
+azurerm_resource_group.RGname: Creating...
+azurerm_resource_group.RGname: Creation complete after 3s [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+The state of your infrastructure has been saved to the path   
+below. This state is required to modify and destroy your      
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate
+PS D:\Terraform\blogLabs\02-workspace&gt; 
+
+PS D:\Terraform\blogLabs\02-workspace&gt; terraform show
+# azurerm_resource_group.RGname:
+resource &quot;azurerm_resource_group&quot; &quot;RGname&quot; {
+    id       = &quot;/subscriptions/XXXX/resourceGroups/UAT-XYZ&quot;
+    location = &quot;eastus&quot;
+    name     = &quot;UAT-XYZ&quot;
+    tags     = {}
+}
+PS D:\Terraform\blogLabs\02-workspace&gt; Get-AzResourceGroup *XYZ | select ResourceGroupName
+
+ResourceGroupName
+-----------------
+UAT-XYZ
+PROD-XYZ
+
+</code></pre><p>When you use <strong>destroy</strong> command within a workspace, all resources created in that stack are deleted. In the below example, I have run the destroy command on the UAT workspace.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS D:\Terraform\blogLabs\02-workspace&gt; terraform workspace select UAT         
+Switched to workspace <span style="color:#e6db74">&#34;UAT&#34;</span>.
+PS D:\Terraform\blogLabs\02-workspace&gt; terraform destroy             
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Refreshing state... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ]
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols<span style="color:#960050;background-color:#1e0010">:</span>
+  - destroy
+
+Terraform will perform the following actions<span style="color:#960050;background-color:#1e0010">:</span>
+
+  <span style="color:#75715e"># azurerm_resource_group.RGname will be destroyed</span>
+  - resource <span style="color:#e6db74">&#34;azurerm_resource_group&#34;</span> <span style="color:#e6db74">&#34;RGname&#34;</span> {
+      - id       = <span style="color:#e6db74">&#34;/subscriptions/XXXX/resourceGroups/UAT-XYZ&#34;</span> -&gt; null
+      - location = <span style="color:#e6db74">&#34;eastus&#34;</span> -&gt; null
+      - name     = <span style="color:#e6db74">&#34;UAT-XYZ&#34;</span> -&gt; null
+      - tags     = {} -&gt; null
+    }
+
+Plan<span style="color:#960050;background-color:#1e0010">:</span> 0 to add, 0 to change, 1 to destroy.
+
+<span style="color:#66d9ef">Do</span> you really want to destroy all resources <span style="color:#66d9ef">in</span> workspace <span style="color:#e6db74">&#34;UAT&#34;</span>?
+  Terraform will destroy all your managed infrastructure, as shown above.
+  There is no undo. Only <span style="color:#e6db74">&#39;yes&#39;</span> will be accepted to confirm.
+
+  Enter a value<span style="color:#960050;background-color:#1e0010">:</span> yes
+
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Destroying... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ]
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Still destroying... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ, 10s elapsed]
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Still destroying... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ, 20s elapsed]
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Still destroying... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ, 30s elapsed]
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Still destroying... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ, 40s elapsed]
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Still destroying... [id=/subscriptions/XXXX/resourceGroups/UAT-XYZ, 50s elapsed]
+azurerm_resource_group.RGname<span style="color:#960050;background-color:#1e0010">:</span> Destruction complete after 51s
+
+Destroy complete! Resources<span style="color:#960050;background-color:#1e0010">:</span> 1 destroyed.
+
+PS D:\Terraform\blogLabs\02-workspace&gt; Get-AzResourceGroup *XYZ | select ResourceGroupName
+
+ResourceGroupName
+-----------------
+PROD-XYZ
+</code></pre></div>
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/terraform/">Terraform</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/azure/">Azure</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/terraform/">Terraform</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/azure/">Azure</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/ioc/">Ioc</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    <div>
+      <h2 id="say-something">Say Something</h2>
+        <form id="comment-form" class="new-comment" method="POST">
+          
+          <h3 class='reply-notice hidden'>
+            <span class='reply-name'></span>
+          </h3>
+
+          
+          <input type="hidden" name="options[entryId]" value="c14bd5c30476d306f7467f38c95bc22a">
+          <input type='hidden' name='fields[replyThread]' value=''>
+          <input type='hidden' name='fields[replyID]' value=''>
+          <input type='hidden' name='fields[replyName]' value=''>
+
+          
+          <input required name='fields[name]' type='text' placeholder='Your Name'>
+          <input name='fields[website]' type='text' placeholder='Your Website'>
+          <input required name='fields[email]' type='email' placeholder='Your Email'>
+          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
+
+          
+          
+
+          
+          <div class='submit-notice'>
+            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
+            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
+          </div>
+
+          
+          <input type='submit' value='Submit' class='button'>
+          <input type='submit' value='Submitted' class='hidden button' disabled>
+          <input type='reset' value='Reset' class='button'>
+        </form>
+    </div>
+
+    
+    <div>
+      <h2>Comments</h2><p>Nothing yet.</p>
+      
+    </div>
+  </article>
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/terraform/" class="button right"><span>Infrastructure as code using Terraform - Part 1</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          <a href="/blog/terraform02/" class="image" style="--bg-image: url('/img/2021/03/terraform.jpg');">
+    <img class="stretchH" src="/img/2021/03/terraform.jpg" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/terraform02/">Infrastructure as code using Terraform - Part 2</a></h2>
+          <time class="published" datetime="2021-03-16 00:00:00 &#43;0000 UTC">March 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/terraform/" class="image" style="--bg-image: url('/img/2021/03/terraform.jpg');">
+    <img class="stretchH" src="/img/2021/03/terraform.jpg" alt="Mountain Range Through Clouds">
+  </a>
+        <header>
+          <h2><a href="/blog/terraform/">Infrastructure as code using Terraform - Part 1</a></h2>
+          <time class="published" datetime="2021-03-15 00:00:00 &#43;0000 UTC">March 15, 2021</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/azure/">azure<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/terraform/">terraform<span class="count">2</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>This theme was developed for Hugo static site generator.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//www.linkedin.com/in/example" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/example" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+<li><a href="//www.pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 about-virtualization.com
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.81.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.ddffbb2f403c4136b84608afcc3d50efd8ee1e79d85cefbeef6875a04aa38a33.js" integrity="sha256-3f&#43;7L0A8QTa4RgivzD1Q79juHnnYXO&#43;&#43;72h1oEqjijM="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

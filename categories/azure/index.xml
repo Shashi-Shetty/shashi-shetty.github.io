@@ -6,7 +6,18 @@
     <description>Recent content in Azure on about-virtualization.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Infrastructure as code using Terraform - Part 2</title>
+      <link>/blog/terraform02/</link>
+      <pubDate>Tue, 16 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/terraform02/</guid>
+      <description>Terraform Workspace
+Terraform Workspace provides you an option to create dedicated runtime stacks for each of your environments. For instance, the requirement is to create a Resource group based on project code for UAT and Prod environments. One of the ways to achieve this is using terraform workspace with a single code.
+A Workspace is created using terraform workspace new workspace_name. To list the workspace, you can use the &amp;ldquo;list&amp;rdquo; option.</description>
+    </item>
+    
     <item>
       <title>Infrastructure as code using Terraform - Part 1</title>
       <link>/blog/terraform/</link>
