@@ -54,6 +54,29 @@
                 href="/de/categories/"
                 />
   </url><url>
+    <loc>/de/contact/</loc>
+    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="/es/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="/zh-cn/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="/de/contact/"
+                />
+  </url><url>
     <loc>/de/</loc>
     <xhtml:link
                 rel="alternate"
@@ -104,29 +127,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="/de/"
-                />
-  </url><url>
-    <loc>/de/contact/</loc>
-    <lastmod>2021-03-15T23:42:45+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="/es/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/zh-cn/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="/de/contact/"
                 />
   </url><url>
     <loc>/de/tags/</loc>
