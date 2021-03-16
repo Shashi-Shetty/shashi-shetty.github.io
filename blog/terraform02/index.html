@@ -293,7 +293,7 @@
       <a href="/blog/terraform02/" class="image" style="--bg-image: url('/img/2021/03/2.jpg');">
     <img class="stretchH" src="/img/2021/03/2.jpg" alt="Mountain Range Through Clouds">
   </a>
-      <p><strong>Terraform Workspace</strong></p>
+      <h1 id="terraform-workspace">Terraform Workspace</h1>
 <p>Terraform Workspace provides you an option to create dedicated runtime stacks for each of your environments. For instance, the requirement is to create a Resource group based on project code for UAT and Prod environments. One of the ways to achieve this is using terraform workspace with a single code.</p>
 <p>A Workspace is created using <strong>terraform workspace new workspace_name.</strong> To list the workspace, you can use the &ldquo;<em>list</em>&rdquo; option. * indicates the current workspace. To switch to a different workspace, use the  “<em>select</em>” option.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">PS C:\content-management\blog&gt; terraform workspace new prod
