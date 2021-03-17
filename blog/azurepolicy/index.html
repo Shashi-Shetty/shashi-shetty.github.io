@@ -13,7 +13,10 @@
   <meta property="og:url" content="/blog/azurepolicy/">
   <meta property="og:type" content="article">
   
-    <meta property="og:image" content="/img/main/logo.jpg">
+    
+      <meta property="og:image" content="/img/2021/03/banner3.jpg">
+      <meta property="og:image:alt" content="">
+    
   
   <link rel="stylesheet" href="/css/bundle.min.7af44880fa8f2867fbbf1b1e6758774b791bf321699b23f84be69e26e842c64a.css" integrity="sha256-evRIgPqPKGf7vxseZ1h3S3kb8yFpmyP4S&#43;aeJuhCxko="><link rel="stylesheet" href="/css/add-on.css">
 </head>
@@ -287,7 +290,9 @@
 
     </div>
     <div class="content">
-      
+      <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/banner3.jpg');">
+    <img src="/img/2021/03/banner3.jpg" alt="">
+  </a>
       <h1 id="azure-policy">Azure Policy</h1>
 <p>All architecture designs are driven by set of rules to meet regulatory and security compliance. Azure policies come into play to enforce these organizational policies at the Azure subscription and management group layers. For example, your company wants to ensure that all your azure resources reside in one Geography, and users are not allowed to create resources outside the preselected Geography. Azure Policy makes it possible by enforcing location setting across Management Group / Subscription/ resource groups.</p>
 <h3 id="the-life-cycle-of-azure-policy">The life cycle of azure policy</h3>
@@ -310,8 +315,8 @@
 <li><strong>AuditIfNotExists</strong> - Enables auditing of resources <strong>if condition</strong> met, but don’t have the properties specified in the details of the <strong>then condition</strong>. For example, you want to check if the security center plugin is installed on Azure VMs , it can be achieved using AuditIfNotExists</li>
 <li><strong>Deny</strong> – Prevents resource  requests. For example, you want to allow only the predefined SKUs and deny VMS outside predefined SKU&rsquo;s , it can be achieved with deny effect</li>
 <li><strong>DeployIfNotExists</strong> – Deploy if the resource doesn’t exist, this is similar to Audit ifnot exists . Instead of just auditing it will deploy the resources.</li>
-<li>Disabled - Policy is evaluated, but settings are not applied.</li>
-<li>Modify - used to add, update, or remove properties of a resource.</li>
+<li><strong>Disabled</strong> - Policy is evaluated, but settings are not applied.</li>
+<li><strong>Modify</strong> - used to add, update, or remove properties of a resource..</li>
 </ul>
 <h3 id="policy-evaluation">Policy evaluation</h3>
 <p>Polices are evaluated in the below order.</p>
@@ -343,8 +348,21 @@
 </figure>
 
 <h2 id="compliances">Compliances</h2>
-<p>Compliances are predefined initiatives available for customers. Some of the examples are ISO 27001, Azure CSI. The regulatory compliance feature needs an Azure defender license, formally known as the standard security center license.</p>
-<p>Security Center and Compliances will be covered under next blog post.</p>
+<p>One of the most significant benefits of azure policies is you can view the overall compliance status of policies and initiatives in one dashboard. Azure Policy compliance dashboard lets you view all the policies and initiatives assigned to Management Group/ subscription/ Resource Group. You can filter the compliance using Scope/policy definition type/compliance state/ custom search.</p>
+<p>You can perform below actions from compliance dashboard .</p>
+<ul>
+<li>View definition of policy /initiative</li>
+<li>Delete assignment</li>
+<li>Edit assignment</li>
+<li>Duplicate the assignment</li>
+<li>Create exemption</li>
+</ul>
+<figure>
+    <img src="/img/2021/03/azurepolicy/compliance.png"/> <figcaption>
+            <h4>Azure Compliance</h4>
+        </figcaption>
+</figure>
+
 
     </div>
     <footer>
@@ -440,7 +458,9 @@
       </header>
       
       <article class="mini-post">
-          
+          <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/banner3.jpg');">
+    <img src="/img/2021/03/banner3.jpg" alt="">
+  </a>
         <header>
           <h2><a href="/blog/azurepolicy/">Azure Policy - Part 1</a></h2>
           <time class="published" datetime="2021-03-17 00:00:00 &#43;0000 UTC">March 17, 2021</time>
