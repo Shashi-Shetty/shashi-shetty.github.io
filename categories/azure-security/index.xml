@@ -13,7 +13,7 @@
       <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
       
       <guid>/blog/azurepolicy/</guid>
-      <description>Azure Policies All architecture designs are driven by set of rules to meet regulatory and security compliance. Azure policies come into play to enforce these organizational policies at the Azure subscription and management group layers. For example, your company wants to ensure that all your azure resources reside in one Geography, and users are not allowed to create resources outside the preselected Geography. Azure policies make it possible by enforcing location setting across Management Group / Subscription/ resource groups.</description>
+      <description>Azure Policy All architecture designs are driven by set of rules to meet regulatory and security compliance. Azure policies come into play to enforce these organizational policies at the Azure subscription and management group layers. For example, your company wants to ensure that all your azure resources reside in one Geography, and users are not allowed to create resources outside the preselected Geography. Azure Policy makes it possible by enforcing location setting across Management Group / Subscription/ resource groups.</description>
     </item>
     
   </channel>
