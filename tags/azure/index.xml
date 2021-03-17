@@ -6,7 +6,16 @@
     <description>Recent content in Azure on about-virtualization.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Policy - Part 1</title>
+      <link>/blog/azurepolicy/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/azurepolicy/</guid>
+      <description>Azure Policies All architecture designs are driven by set of rules to meet regulatory and security compliance. Azure policies come into play to enforce these organizational policies and assess them at the Azure subscription and management group layers. For example, your company wants to ensure that all your azure resources reside in one Geography, and users are not allowed to create resources outside the preselected Geography. Azure policies make it possible by enforcing this configuration across Management Group / Subscription/ resource groups.</description>
+    </item>
+    
     <item>
       <title>Infrastructure as code using Terraform - Part 2</title>
       <link>/blog/terraform02/</link>
