@@ -13,10 +13,7 @@
   <meta property="og:url" content="/blog/azurepolicy/">
   <meta property="og:type" content="article">
   
-    
-      <meta property="og:image" content="/img/2021/03/3.jpg">
-      <meta property="og:image:alt" content="Mountain Range Through Clouds">
-    
+    <meta property="og:image" content="/img/main/logo.jpg">
   
   <link rel="stylesheet" href="/css/bundle.min.7af44880fa8f2867fbbf1b1e6758774b791bf321699b23f84be69e26e842c64a.css" integrity="sha256-evRIgPqPKGf7vxseZ1h3S3kb8yFpmyP4S&#43;aeJuhCxko="><link rel="stylesheet" href="/css/add-on.css">
 </head>
@@ -290,9 +287,7 @@
 
     </div>
     <div class="content">
-      <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/3.jpg');">
-    <img class="stretchH" src="/img/2021/03/3.jpg" alt="Mountain Range Through Clouds">
-  </a>
+      
       <h1 id="azure-policies">Azure Policies</h1>
 <p>All architecture designs are driven by set of rules to meet regulatory and security compliance. Azure policies come into play to enforce these organizational policies and assess them at the Azure subscription and management group layers. For example, your company wants to ensure that all your azure resources reside in one Geography, and users are not allowed to create resources outside the preselected Geography.  Azure policies make it possible by enforcing this configuration across Management Group / Subscription/ resource groups.  There are 100’s of predefined policies which can be leveraged according to the business requirement.</p>
 <p><strong>The life cycle of azure policy</strong></p>
@@ -302,11 +297,13 @@
         </figcaption>
 </figure>
 
-<p>-     A policy definition can be stored at the Management Group level or a Subscription.</p>
-<p>-     Policy definition location is mandatory before you create a custom policy.</p>
-<p>-     When you assign a policy, it will take a minimum of 30 mins to take effect.</p>
-<h2 id="policy-effects">Policy Effects</h2>
-<p>Policy effect can be one of below.</p>
+<ul>
+<li>A policy definition can be stored at the Management Group level or a Subscription.</li>
+<li>Policy definition location is mandatory before you create a custom policy.</li>
+<li>When you assign a policy, it will take a minimum of 30 mins to take effect..</li>
+</ul>
+<h3 id="policy-effects">Policy Effects</h3>
+<p>A Policy effect can be one of below.</p>
 <ul>
 <li><strong>Append</strong> –  appends settings to an existing resource. For example, you want to allow access to storage account from an ip address , it can be achieved using append effect .</li>
 <li><strong>Audit</strong> – Writes a warning event in the activity log when evaluating a non-compliant resource. For example, you want to evaluate if all your azure resources and resource groups are in the exact location , it can be achieved using audit effect .</li>
@@ -316,10 +313,10 @@
 <li>Disabled - Policy is evaluated, but settings are not applied.</li>
 <li>Modify - used to add, update, or remove properties of a resource.</li>
 </ul>
-<h2 id="policy-evaluation">Policy evaluation</h2>
+<h3 id="policy-evaluation">Policy evaluation</h3>
 <p>Polices are evaluated in the below order.</p>
 <figure>
-    <img src="img/2021/03/azurepolicy/evaluation.png"/> <figcaption>
+    <img src="/img/2021/03/azurepolicy/evaluation.png"/> <figcaption>
             <h4>Azure Policy</h4>
         </figcaption>
 </figure>
@@ -340,13 +337,14 @@
 <h2 id="initiatives">Initiatives</h2>
 <p>Initiatives are nothing but a group of polices definitions. You can define your initiative along with version control.</p>
 <figure>
-    <img src="img/2021/03/azurepolicy/initiave.png"/> <figcaption>
+    <img src="/img/2021/03/azurepolicy/initiave.png"/> <figcaption>
             <h4>Azure Policy</h4>
         </figcaption>
 </figure>
 
 <h2 id="compliances">Compliances</h2>
-<p>Compliances are predefined initiatives available for customers. Some of the examples are ISO 27001, Azure CSI. Compliances are scanned once in 24 hours. The regulatory compliance feature needs an Azure defender license, formally known as the standard security center license.</p>
+<p>Compliances are predefined initiatives available for customers. Some of the examples are ISO 27001, Azure CSI. The regulatory compliance feature needs an Azure defender license, formally known as the standard security center license.</p>
+<p>Security Center and Compliances will be covered under next blog post.</p>
 
     </div>
     <footer>
@@ -442,9 +440,7 @@
       </header>
       
       <article class="mini-post">
-          <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/3.jpg');">
-    <img class="stretchH" src="/img/2021/03/3.jpg" alt="Mountain Range Through Clouds">
-  </a>
+          
         <header>
           <h2><a href="/blog/azurepolicy/">Azure Policy - Part 1</a></h2>
           <time class="published" datetime="2021-03-17 00:00:00 &#43;0000 UTC">March 17, 2021</time>
