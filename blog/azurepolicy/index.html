@@ -14,7 +14,7 @@
   <meta property="og:type" content="article">
   
     
-      <meta property="og:image" content="/img/2021/03/2.jpg">
+      <meta property="og:image" content="/img/2021/03/3.jpg">
       <meta property="og:image:alt" content="Mountain Range Through Clouds">
     
   
@@ -290,13 +290,18 @@
 
     </div>
     <div class="content">
-      <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/2.jpg');">
-    <img class="stretchH" src="/img/2021/03/2.jpg" alt="Mountain Range Through Clouds">
+      <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/3.jpg');">
+    <img class="stretchH" src="/img/2021/03/3.jpg" alt="Mountain Range Through Clouds">
   </a>
       <h1 id="azure-policies">Azure Policies</h1>
 <p>All architecture designs are driven by set of rules to meet regulatory and security compliance. Azure policies come into play to enforce these organizational policies and assess them at the Azure subscription and management group layers. For example, your company wants to ensure that all your azure resources reside in one Geography, and users are not allowed to create resources outside the preselected Geography.  Azure policies make it possible by enforcing this configuration across Management Group / Subscription/ resource groups.  There are 100’s of predefined policies which can be leveraged according to the business requirement.</p>
 <p><strong>The life cycle of azure policy</strong></p>
-<p><img src="img/2021/03/azurepolicy/PolicyLifeCycle.png" alt=""></p>
+<figure>
+    <img src="img/2021/03/azurepolicy/PolicyLifeCycle.png"/> <figcaption>
+            <h4>Azure Policy</h4>
+        </figcaption>
+</figure>
+
 <p>-     A policy definition can be stored at the Management Group level or a Subscription.</p>
 <p>-     Policy definition location is mandatory before you create a custom policy.</p>
 <p>-     When you assign a policy, it will take a minimum of 30 mins to take effect.</p>
@@ -313,7 +318,12 @@
 </ul>
 <h2 id="policy-evaluation">Policy evaluation</h2>
 <p>Polices are evaluated in the below order.</p>
-<p><img src="img/2021/03/azurepolicy/evaluation.png" alt=""></p>
+<figure>
+    <img src="img/2021/03/azurepolicy/evaluation.png"/> <figcaption>
+            <h4>Azure Policy</h4>
+        </figcaption>
+</figure>
+
 <p>You can assign more than one policy to a Management Group / Subscription / Resource Group. Like Group policies in Active Directory, the policies are inherited from the top unless you exclude them in the assignment.</p>
 <p>Below is a simple demo for assigning an inbuilt policy to allow only Standard A0 SKU. At the end of the video, you can see that the Virtual machine creation fails if I select anything apart from Standard A0 SKU. Another important observation is that the policy “Audit resource location matches resource group location” is not stopping me from creating a VM in east US2 location as the policy effect is audit only.</p>
 
@@ -329,7 +339,12 @@
 
 <h2 id="initiatives">Initiatives</h2>
 <p>Initiatives are nothing but a group of polices definitions. You can define your initiative along with version control.</p>
-<p><img src="img/2021/03/azurepolicy/initiave.png" alt=""></p>
+<figure>
+    <img src="img/2021/03/azurepolicy/initiave.png"/> <figcaption>
+            <h4>Azure Policy</h4>
+        </figcaption>
+</figure>
+
 <h2 id="compliances">Compliances</h2>
 <p>Compliances are predefined initiatives available for customers. Some of the examples are ISO 27001, Azure CSI. Compliances are scanned once in 24 hours. The regulatory compliance feature needs an Azure defender license, formally known as the standard security center license.</p>
 
@@ -427,8 +442,8 @@
       </header>
       
       <article class="mini-post">
-          <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/2.jpg');">
-    <img class="stretchH" src="/img/2021/03/2.jpg" alt="Mountain Range Through Clouds">
+          <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/3.jpg');">
+    <img class="stretchH" src="/img/2021/03/3.jpg" alt="Mountain Range Through Clouds">
   </a>
         <header>
           <h2><a href="/blog/azurepolicy/">Azure Policy - Part 1</a></h2>
