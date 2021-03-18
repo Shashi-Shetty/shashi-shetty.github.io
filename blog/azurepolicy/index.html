@@ -311,7 +311,7 @@
 <p>A Policy effect can be one of below.</p>
 <ul>
 <li><strong>Append</strong> –  appends settings to an existing resource. For example, you want to allow access to storage account from an ip address , it can be achieved using append effect .</li>
-<li><strong>Audit</strong> – Writes a warning event in the activity log when evaluating a non-compliant resource. For example, you want to evaluate if all your azure resources and resource groups are in the exact location , it can be achieved using audit effect .</li>
+<li><strong>Audit</strong> – Writes a warning event in the activity log when evaluating a non-compliant resource. In other words, it is audit if resouce exisits. For example, you want to evaluate if all your azure resources and resource groups are in the exact location , it can be achieved using audit effect .</li>
 <li><strong>AuditIfNotExists</strong> - Enables auditing of resources <strong>if condition</strong> met, but don’t have the properties specified in the details of the <strong>then condition</strong>. For example, you want to check if the security center plugin is installed on Azure VMs , it can be achieved using AuditIfNotExists</li>
 <li><strong>Deny</strong> – Prevents resource  requests. For example, you want to allow only the predefined SKUs and deny VMS outside predefined SKU&rsquo;s , it can be achieved with deny effect</li>
 <li><strong>DeployIfNotExists</strong> – Deploy if the resource doesn’t exist, this is similar to Audit ifnot exists . Instead of just auditing it will deploy the resources.</li>
