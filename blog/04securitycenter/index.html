@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>Azure Security - Part 2 - about-virtualization.com</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<meta name="generator" content="Hugo 0.82.0" /><meta property="og:site_name" content="about-virtualization.com">
+  <meta property="og:title" content="Azure Security - Part 2">
+  <meta property="og:description" content="Series of blog posts on Azure Policies and Security Center.">
+  <meta property="description" content="Series of blog posts on Azure Policies and Security Center.">
+  <meta property="og:url" content="/blog/04securitycenter/">
+  <meta property="og:type" content="article">
+  
+    
+      <meta property="og:image" content="/img/2021/03/banner4.jpg">
+      <meta property="og:image:alt" content="">
+    
+  
+  <link rel="stylesheet" href="/css/bundle.min.9b0f87cba51f7b7938d133fa4e3fd7462aaef0ee900f2c696d7b57cedb163e70.css" integrity="sha256-mw&#43;Hy6Ufe3k40TP6Tj/XRiqu8O6QDyxpbXtXztsWPnA="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+        
+          
+          <a href="/contact/" class="nav link"><i class='far fa-envelope'></i> Contact</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+    
+      
+    
+      
+        <a href="/fr" lang="fr" class="nav no-lang link">Français (fr)</a>
+      
+    
+      
+        <a href="/pl" lang="pl" class="nav no-lang link">Polski (pl)</a>
+      
+    
+      
+        <a href="/pt" lang="pt" class="nav no-lang link">Português (pt)</a>
+      
+    
+      
+        <a href="/de" lang="de" class="nav no-lang link">Deutsche (de)</a>
+      
+    
+      
+        <a href="/es" lang="es" class="nav no-lang link">Española (es)</a>
+      
+    
+      
+        <a href="/zh-cn" lang="zh-cn" class="nav no-lang link">中文 (简体) (zh-cn)</a>
+      
+    
+      
+        <a href="/zh-tw" lang="zh-tw" class="nav no-lang link">中文 (正體) (zh-tw)</a>
+      
+    
+      
+        <a href="/ja" lang="ja" class="nav no-lang link">日本語 (ja)</a>
+      
+    
+      
+        <a href="/nl" lang="nl" class="nav no-lang link">Nederlands (nl)</a>
+      
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Azure%20Security%20-%20Part%202&amp;url=%2fblog%2f04securitycenter%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2f04securitycenter%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=%2fblog%2f04securitycenter%2f&amp;title=Azure%20Security%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2f04securitycenter%2f&amp;title=Azure%20Security%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2f04securitycenter%2f&amp;description=Azure%20Security%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Shashi%20Shetty&amp;body=%2fblog%2f04securitycenter%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" >
+  <a href="/"><img src="/img/main/logo.jpg" class="circle" width="100" alt="Hugo Future Imperfect Slim" /></a>
+  <header>
+    <h1>Shashi Shetty</h1>
+  </header>
+  <main>
+    <p>Opinions Are My Own.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//www.linkedin.com/in/shashi-shetty" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/about-virtualization" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+<li><a href="//www.pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/04securitycenter/">Azure Security - Part 2</a></h2>
+    
+    
+      <p>Series of blog posts on Azure Policies and Security Center.</p>
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-03-28 00:00:00 &#43;0000 UTC">March 28, 2021</time>
+    <p>Shashi Shetty</p>
+    <p>5-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=Azure%20Security%20-%20Part%202&amp;url=%2fblog%2f04securitycenter%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=%2fblog%2f04securitycenter%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+    <a href="//www.reddit.com/submit?url=%2fblog%2f04securitycenter%2f&amp;title=Azure%20Security%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn reddit">
+          <p>Reddit</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=%2fblog%2f04securitycenter%2f&amp;title=Azure%20Security%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="//www.pinterest.com/pin/create/button/?url=%2fblog%2f04securitycenter%2f&amp;description=Azure%20Security%20-%20Part%202" target="_blank" rel="noopener" class="nav share-btn pinterest">
+          <p>Pinterest</p>
+        </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Shashi%20Shetty&amp;body=%2fblog%2f04securitycenter%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      <a href="/blog/04securitycenter/" class="image" style="--bg-image: url('/img/2021/03/banner4.jpg');">
+    <img src="/img/2021/03/banner4.jpg" alt="">
+  </a>
+      <h1 id="azure-security-center"><strong>Azure Security Center</strong></h1>
+<p>Azure Security Center is a centralized security management system/dashboard that provides security related information of your Hybrid infrastructure. Azure security works in conjunction with you, the customer, which provides recommendations to you in making your environment secure. It&rsquo;s the customer&rsquo;s responsibility to work on these recommendations and make infrastructure secure. The security center&rsquo;s remarkable feature is the recommendations tab; This view provides an overall security score and recommendations on how to increase the score. Recommendations are provided along with the number of potential security points.</p>
+<figure>
+    <img src="/img/2021/03/04/1.png"/> <figcaption>
+            <h4>Security Center Overview</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/img/2021/03/04/2.png"/> <figcaption>
+            <h4>Security Center Recommendation</h4>
+        </figcaption>
+</figure>
+
+<p>Azure security licensing comes in two tiers, free and Defender. The free version is active by default. You need to onboard a subscription to enable the Defender plan. Pricing is based on resource type and consummation.</p>
+<p>Defender tier is enabled by following either of below options</p>
+<ul>
+<li>
+<p>Security -&gt; Management -&gt; Pricing &amp; Settings -&gt;Azure defender Plan</p>
+</li>
+<li>
+<p>Security -&gt; Management -&gt; Coverage -&gt;edit plan</p>
+</li>
+</ul>
+<p><figure>
+    <img src="/img/2021/03/04/3.png"/> <figcaption>
+            <h4>Security Center License Tier</h4>
+        </figcaption>
+</figure>
+
+<figure>
+    <img src="/img/2021/03/04/4.png"/> <figcaption>
+            <h4>Defender License by resource</h4>
+        </figcaption>
+</figure>
+</p>
+<p><em>Log analytic workspace needs onboarding to defender tier along with subscriptions</em>.</p>
+<figure>
+    <img src="/img/2021/03/04/5.png"/> <figcaption>
+            <h4>Workspace defender License</h4>
+        </figcaption>
+</figure>
+
+<p><strong>Note: when you enable the free trial for 30 days, Defender is  auto charged based on consumption post 30 days</strong></p>
+<h2 id="communication"><strong>Communication</strong></h2>
+<p>Once the defender plan is enabled, you need to install the agent to collect the data. Azure security center collects the data using Log Analytics agent on the VM, Log analytic workspace stores the data for further analysis.</p>
+<p>You can enable the agent&rsquo;s auto-provisioning using – <strong>Security Center-&gt; Pricing&amp; Settings -&gt; Your subscription -&gt; Auto Provisioning.</strong></p>
+<p><strong>Log Analytics agent for Azure VMs</strong> – collects event logs and related security configurations</p>
+<p><strong>Microsoft Dependency agent</strong> - The Dependency agent collects discovered data about processes running on the machine and external process dependencies. Used for Service Map and VM insights</p>
+<p><strong>Policy Add-on for Kubernetes</strong> – Enables reporting of auditing and compliance details of Kubernetes cluster to Azure Policies.</p>
+<p>You can enable or disable the auto agent installation for all three extensions or select only those relevant to you.</p>
+<p>You can use your organization-specific software distribution tool to install the agents. To add a non-azure system, use the below option</p>
+<p>-     Security Center -&gt; General -&gt; inventory -&gt; add non azure servers</p>
+<p>-     Security Center -&gt;Security Solutions -&gt; non azure servers add</p>
+<p>Note: Charges will be based on per Node per month.</p>
+<h2 id="cloud-security">Cloud Security</h2>
+<p>Azure Security Centre cloud security has four components.</p>
+<ol>
+<li>Secure score – here, you can see the overall security score of your subscriptions</li>
+<li>Regulatory Compliance – Regulatory compliance is the inbuilt standard policies that are applied to Azure subscriptions. You can add additional Microsoft pre-defined regulatory compliance under security policies.</li>
+<li>Firewall manager - Azure Firewall Manager is a security management service that provides central security policy and route management for cloud-based security perimeters.</li>
+<li>Azure Defender allows you to configure advanced protections options</li>
+</ol>
+<ul>
+<li>
+<p>VM vulnerability assessment</p>
+</li>
+<li>
+<p>Just in time access</p>
+</li>
+<li>
+<p>Adaptive application access</p>
+</li>
+<li>
+<p>Container image scanning</p>
+</li>
+<li>
+<p>Adaptive network hardening</p>
+</li>
+<li>
+<p>SQL vulnerability assessment</p>
+</li>
+<li>
+<p>File integrity monitoring</p>
+</li>
+<li>
+<p>Network map</p>
+</li>
+<li>
+<p>IoT security</p>
+</li>
+</ul>
+<p><strong>VM vulnerability assessment</strong> –  In the background, the Defender uses Qualys&rsquo;s powered agent, which identifies the system&rsquo;s threat. You don&rsquo;t need any additional Qualys licenses to use this feature. You can even install your own vulnerability solution like Rapid 7. However, license needs to be taken care by customer. Post the agent installation; it takes 24 hours to reflect in the security center portal.</p>
+<p><strong>Adaptive application access</strong> – Allows admins to white-list the applications to be run on a VM rather than blacklisting. App sense is used in the background to learn the applications and white list the applications</p>
+<p><strong>Container image scanning (Qualys)</strong> – Scans Azure container registry for security vulnerabilities and exposes detailed findings for each image.</p>
+<p><strong>Adaptive network hardening</strong>- Analyses the virtual machines' internet traffic communication patterns and determines if the existing rules in the NSGs associated are overly permissive, resulting in an increased potential attack surface. This typically occurs when this IP address doesn&rsquo;t communicate regularly with this resource. Alternatively, the IP address has been flagged as malicious by Security Center&rsquo;s threat intelligence sources.</p>
+<p><strong>SQL vulnerability assessment</strong> - Scans database for security vulnerabilities and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data.</p>
+<p><strong>File integrity monitoring</strong> - Log Analytics workspace is used to monitor the file integrity. You need to enable this feature on a log analytics work space explicitly. This feature monitors the changes to the registry, operating system files, and application software for any potential attack. The checksum comparison method is used to find the difference from the last scan to the files' current state. It can also write the changes to a storage account so that an admin can compare the old and new files. Storage cost needs to be considered before enabling the feature .</p>
+<p><strong>Network Map</strong> – Creates network map, showing the topology and workload.</p>
+<p><strong>Just in Time</strong> – Popularly known as JIT, this feature works on the back of an NSG. The pre-requisite to enable this feature is NSG. In a nutshell, the JIT adds a deny rule on top of existing NGS rules attached to a VM. Allow rule in NSG is created only when a user requests access. JIT configuration contains the ports, source IP address, and allowed duration. The minimum allowed time is 1 hour, and the default is 03 hours; post this interval the NSG allow rule is removed.</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/K-6D7yC5swc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="Azure JIT"></iframe>
+</div>
+
+<p>Access level required to request JIT access to a VM .</p>
+<figure>
+    <img src="/img/2021/03/04/6.png"/> <figcaption>
+            <h4>Azure JIT - Access level</h4>
+        </figcaption>
+</figure>
+
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/azure-security/">Azure Security</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/azure/">Azure</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/azure-security/">Azure Security</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/azure/">Azure</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/jti/">JTI</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    
+    <div>
+      <h2 id="say-something">Say Something</h2>
+        <form id="comment-form" class="new-comment" method="POST">
+          
+          <h3 class='reply-notice hidden'>
+            <span class='reply-name'></span>
+          </h3>
+
+          
+          <input type="hidden" name="options[entryId]" value="321552182e1bebf95a13cd59845d3a93">
+          <input type='hidden' name='fields[replyThread]' value=''>
+          <input type='hidden' name='fields[replyID]' value=''>
+          <input type='hidden' name='fields[replyName]' value=''>
+
+          
+          <input required name='fields[name]' type='text' placeholder='Your Name'>
+          <input name='fields[website]' type='text' placeholder='Your Website'>
+          <input required name='fields[email]' type='email' placeholder='Your Email'>
+          <textarea required name='fields[body]' placeholder='Your Message' rows='10'></textarea>
+
+          
+          
+
+          
+          <div class='submit-notice'>
+            <strong class='submit-notice-text submit-success hidden'>Thanks for your comment! It will be shown on the site once it has been approved.</strong>
+            <strong class='submit-notice-text submit-failed hidden'>Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
+          </div>
+
+          
+          <input type='submit' value='Submit' class='button'>
+          <input type='submit' value='Submitted' class='hidden button' disabled>
+          <input type='reset' value='Reset' class='button'>
+        </form>
+    </div>
+
+    
+    <div>
+      <h2>Comments</h2><p>Nothing yet.</p>
+      
+    </div>
+  </article>
+
+
+  
+  <div class="pagination">
+    
+    
+      <a href="/blog/azurepolicy/" class="button right"><span>Azure Security - Part 1</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          <a href="/blog/04securitycenter/" class="image" style="--bg-image: url('/img/2021/03/banner4.jpg');">
+    <img src="/img/2021/03/banner4.jpg" alt="">
+  </a>
+        <header>
+          <h2><a href="/blog/04securitycenter/">Azure Security - Part 2</a></h2>
+          <time class="published" datetime="2021-03-28 00:00:00 &#43;0000 UTC">March 28, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/azurepolicy/" class="image" style="--bg-image: url('/img/2021/03/banner3.jpg');">
+    <img src="/img/2021/03/banner3.jpg" alt="">
+  </a>
+        <header>
+          <h2><a href="/blog/azurepolicy/">Azure Security - Part 1</a></h2>
+          <time class="published" datetime="2021-03-17 00:00:00 &#43;0000 UTC">March 17, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/terraform02/" class="image" style="--bg-image: url('/img/2021/03/2.jpg');">
+    <img src="/img/2021/03/2.jpg" alt="">
+  </a>
+        <header>
+          <h2><a href="/blog/terraform02/">Infrastructure as code using Terraform - Part 2</a></h2>
+          <time class="published" datetime="2021-03-16 00:00:00 &#43;0000 UTC">March 16, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          <a href="/blog/terraform/" class="image" style="--bg-image: url('/img/2021/03/terraform.jpg');">
+    <img src="/img/2021/03/terraform.jpg" alt="">
+  </a>
+        <header>
+          <h2><a href="/blog/terraform/">Infrastructure as code using Terraform - Part 1</a></h2>
+          <time class="published" datetime="2021-03-15 00:00:00 &#43;0000 UTC">March 15, 2021</time>
+        </header>
+      </article>
+      
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/azure/">azure<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/azure-security/">azure-security<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/terraform/">terraform<span class="count">2</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>Dependable and goal-oriented IT infrastructure engineer with 12 years of experience in designing and delivering infrastructure projects.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/pacollins/hugo-future-imperfect-slim" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+
+
+
+
+
+
+<li><a href="//flickr.com/photos/example" target="_blank" rel="noopener" title="Flickr" class="fab fa-flickr"></a></li>
+
+
+
+
+<li><a href="//www.linkedin.com/in/shashi-shetty" target="_blank" rel="noopener" title="LinkedIn" class="fab fa-linkedin"></a></li>
+<li><a href="//linkedin.com/company/examplebusiness" target="_blank" rel="noopener" title="LinkedIn Company" class="fab fa-linkedin"></a></li>
+
+
+
+<li><a href="//facebook.com/example" target="_blank" rel="noopener" title="Facebook" class="fab fa-facebook"></a></li>
+<li><a href="//reddit.com/user/about-virtualization" target="_blank" rel="noopener" title="Reddit" class="fab fa-reddit"></a></li>
+
+
+
+
+
+
+
+<li><a href="//instagram.com/example" target="_blank" rel="noopener" title="Instagram" class="fab fa-instagram"></a></li>
+
+<li><a href="//twitter.com/example" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+<li><a href="//www.pinterest.com/example" target="_blank" rel="noopener" title="Pinterest" class="fab fa-pinterest-p"></a></li>
+<li><a href="//telegram.me/example" target="_blank" rel="noopener" title="telegram" class="fab fa-telegram"></a></li>
+
+
+
+<li><a href="//researchgate.net/profile/example" target="_blank" rel="noopener" title="Research Gate"><i class="ai ai-researchgate"></i></a></li>
+<li><a href="//keybase.io/example" target="_blank" rel="noopener" title="keybase" class="fab fa-keybase"></a></li>
+<li><a href="//example.com/@example" target="_blank" rel="noopener" title="mastodon" class="fab fa-mastodon"></a></li>
+<li><a href="mailto:example" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 about-virtualization.com
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.82.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.ddffbb2f403c4136b84608afcc3d50efd8ee1e79d85cefbeef6875a04aa38a33.js" integrity="sha256-3f&#43;7L0A8QTa4RgivzD1Q79juHnnYXO&#43;&#43;72h1oEqjijM="></script>
+    <script src="/js/add-on.js"></script>
+    </div>
+  </body>
+</html>

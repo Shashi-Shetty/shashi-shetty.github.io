@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -56,25 +56,25 @@
                 />
   </url><url>
     <loc>/tags/azure/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
   </url><url>
     <loc>/categories/azure/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
   </url><url>
     <loc>/tags/azure-security/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
   </url><url>
     <loc>/categories/azure-security/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
   </url><url>
-    <loc>/blog/azurepolicy/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <loc>/blog/04securitycenter/</loc>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
   </url><url>
     <loc>/blog/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -126,8 +126,11 @@
                 href="/categories/"
                 />
   </url><url>
+    <loc>/tags/jti/</loc>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
+  </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
+    <lastmod>2021-03-28T23:02:42+05:30</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -178,6 +181,9 @@
                 hreflang="en"
                 href="/tags/"
                 />
+  </url><url>
+    <loc>/blog/azurepolicy/</loc>
+    <lastmod>2021-03-18T15:47:00+05:30</lastmod>
   </url><url>
     <loc>/blog/terraform02/</loc>
     <lastmod>2021-03-17T20:15:11+05:30</lastmod>
