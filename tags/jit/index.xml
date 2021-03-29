@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JIT on about-virtualization.com</title>
+    <link>/tags/jit/</link>
+    <description>Recent content in JIT on about-virtualization.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/jit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Azure Security - Part 2</title>
+      <link>/blog/04securitycenter/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/04securitycenter/</guid>
+      <description>Azure Security Center Azure Security Center is a centralized security management system/dashboard that provides security related information of your Hybrid infrastructure. Azure security works in conjunction with you, the customer, which provides recommendations to you in making your environment secure. It&amp;rsquo;s the customer&amp;rsquo;s responsibility to work on these recommendations and make infrastructure secure. The security center&amp;rsquo;s remarkable feature is the recommendations tab; This view provides an overall security score and recommendations on how to increase the score.</description>
+    </item>
+    
+  </channel>
+</rss>
