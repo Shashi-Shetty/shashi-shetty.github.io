@@ -240,7 +240,7 @@
   <div class="meta">
     <time datetime="2021-03-28 00:00:00 &#43;0000 UTC">March 28, 2021</time>
     <p>Shashi Shetty</p>
-    <p>5-Minute Read</p>
+    <p>6-Minute Read</p>
   </div>
 </header>
 
@@ -307,6 +307,15 @@
         </figcaption>
 </figure>
 
+<h2 id="shared-responsibility-in-the-cloud">Shared responsibility in the cloud</h2>
+<p>In an on-prem infrastructure, you own end-to-end security, i.e., data center access to individual applications/data access. In cloud infra, some of the responsibilities are transferred to cloud service provider.</p>
+<figure>
+    <img src="/img/2021/03/04/SR.png"/> <figcaption>
+            <h4>Shared responsibility in the cloud</h4>
+        </figcaption>
+</figure>
+
+<h2 id="azure-security-center-license">Azure security Center License</h2>
 <p>Azure security licensing comes in two tiers, free and Defender. The free version is active by default. You need to onboard a subscription to enable the Defender plan. Pricing is based on resource type and consummation.</p>
 <p>Defender tier is enabled by following either of below options</p>
 <ul>
@@ -385,7 +394,7 @@
 <p>IoT security</p>
 </li>
 </ul>
-<p><strong>VM vulnerability assessment</strong> –  In the background, the Defender uses Qualys&rsquo;s powered agent, which identifies the system&rsquo;s threat. You don&rsquo;t need any additional Qualys licenses to use this feature. You can even install your own vulnerability solution like Rapid 7. However, license needs to be taken care by customer. Post the agent installation; it takes 24 hours to reflect in the security center portal.</p>
+<p><strong>VM vulnerability assessment</strong> –  In the background, the Defender uses Qualys&rsquo;s powered agent, which identifies the system&rsquo;s threat. You don&rsquo;t need any additional Qualys licenses to use this feature. You can even install your own vulnerability solution like Rapid 7. However, license needs to be taken care by customer. Post the agent installation;It would take a minimum of 30 mins to reflect the agent installation status in the security center. Vulnerabilities are assed once in 24 hours; even if you remediate, it takes 24 hours to clear from the dashboard.</p>
 <p><strong>Adaptive application access</strong> – Allows admins to white-list the applications to be run on a VM rather than blacklisting. App sense is used in the background to learn the applications and white list the applications</p>
 <p><strong>Container image scanning (Qualys)</strong> – Scans Azure container registry for security vulnerabilities and exposes detailed findings for each image.</p>
 <p><strong>Adaptive network hardening</strong>- Analyses the virtual machines' internet traffic communication patterns and determines if the existing rules in the NSGs associated are overly permissive, resulting in an increased potential attack surface. This typically occurs when this IP address doesn&rsquo;t communicate regularly with this resource. Alternatively, the IP address has been flagged as malicious by Security Center&rsquo;s threat intelligence sources.</p>
@@ -405,6 +414,26 @@
         </figcaption>
 </figure>
 
+<h2 id="management">Management</h2>
+<p>The security center&rsquo;s management section allows you to manage licenses, connect to third party solutions , configure agent auto installation, and automate workflows.</p>
+<p><strong>Pricing and settings</strong> allow you to</p>
+<ul>
+<li>Change the license tier of your subscription</li>
+<li>Enable / Disable auto-provisioning of extensions ( agents)</li>
+<li>Configure Email notifications along with notification types</li>
+<li>Integrate with other Microsoft security services like cloud security.</li>
+<li>Automate the workflows based on the type of threat detected; also available directly under the security center&rsquo;s management pane.</li>
+<li>Continuous export of security center data – recommendations/scores/alerts / regulatory compliance to Event hub or Log analytic workspace</li>
+<li>Connect to other clouds – AWS / GCP; also available directly under the security center&rsquo;s management pane.</li>
+</ul>
+<p><strong>Security Policy</strong> allows you to add or modify security policies / regulatory compliances and custom initiatives. By default, standard ASC default policies are applied to your subscription.</p>
+<p><strong>Security Solution</strong>s allows you to view the connected security solutions (auto-discovered security solutions) and configure data sources. Data sources can be a non-azure machine, SIEM, and Azure App gateway with firewall enabled.</p>
+<p>SIEM – Data is exported to Third party SIEM via – Security Center -&gt; Azure monitor-&gt; azure event hub -&gt;azure functions -&gt;SIEM</p>
+<h2 id="limitations">Limitations</h2>
+<p>Email notifications of the security center have the following limitations; you can use workflow automation to get around the limitation.</p>
+<p>·     a maximum of one email per <strong>6 hours</strong> (4 emails per day) for <strong>high-severity</strong> alerts</p>
+<p>·     a maximum of one email per <strong>12 hours</strong> (2 emails per day) for <strong>medium-severity</strong> alerts</p>
+<p>·     a maximum of one email per <strong>24 hours</strong> for <strong>low-severity</strong> alerts</p>
 
     </div>
     <footer>
