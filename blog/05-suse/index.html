@@ -8,8 +8,8 @@
 
 <meta name="generator" content="Hugo 0.82.0" /><meta property="og:site_name" content="about-virtualization.com">
   <meta property="og:title" content="Linux Basic commands">
-  <meta property="og:description" content="Refresh posts for SUSE Linux.">
-  <meta property="description" content="Refresh posts for SUSE Linux.">
+  <meta property="og:description" content="List of basic linux commands.">
+  <meta property="description" content="List of basic linux commands.">
   <meta property="og:url" content="/blog/05-suse/">
   <meta property="og:type" content="article">
   
@@ -234,7 +234,7 @@
       <h2><a href="/blog/05-suse/">Linux Basic commands</a></h2>
     
     
-      <p>Refresh posts for SUSE Linux.</p>
+      <p>List of basic linux commands.</p>
     
   </div>
   <div class="meta">
@@ -310,14 +310,7 @@
 <p>While configuring the Linux guest, use the default virtual switch on hyper v , which would enable internet access on your guest OS</p>
 </li>
 <li>
-<ul>
-<li>Test Internet access using ping <a href="http://www.google.com">www.google.com</a>  from your guest VM</li>
-</ul>
-</li>
-<li>
 <p>To enable SSH, add the rule in the guest VM and restart the firewall service</p>
-</li>
-<li>
 <ul>
 <li>sudo firewall-cmd &ndash;permanent &ndash;add-service=ssh</li>
 <li>sudo firewall-cmd &ndash;reload</li>
@@ -338,7 +331,7 @@
 </ul>
 </li>
 <li>
-<p>pwd – current absolute path</p>
+<p>pwd – Prints current absolute path</p>
 <pre><code>linux@localhost:~&gt; pwd
 /home/linux
 linux@localhost:~&gt; cd testfolder/
@@ -358,10 +351,10 @@ linux@localhost:/etc&gt; cd -
    
 </code></pre></li>
 <li>
-<p>touch - create an empty file</p>
+<p>touch - Create an empty file . You can create more than one file in a single .</p>
 </li>
 <li>
-<p>ls - list</p>
+<p>ls - lists the files and folders in the current directory . &ldquo;.&rdquo; reffers to current folder and &ldquo;..&rdquo; refers to parent folder. Below are some of the commonly uses options for ls command.</p>
 <ul>
 <li>lt - newest files are displayed first</li>
 <li>lr - newest files are displayed at the last</li>
@@ -424,10 +417,10 @@ drwxr-xr-x 1 root   root      0 Jun 22  2020 apparmor
 
 </code></pre><ol start="6">
 <li>
-<p>chown - change owner of the file or folder</p>
+<p>chown - Change owner of the file or folder</p>
 </li>
 <li>
-<p>chmod - change permission of a file or folder. First three bits refers to user , next 3 are for group and last 3 are for others. You can even use numbers to change permission</p>
+<p>chmod - Change permission of a file or folder. First three bits refers to user, next 3 are for group and last 3 are for others. You can even use numbers to change permission</p>
 <ul>
 <li>
 <p>read = 4</p>
@@ -467,7 +460,7 @@ total 0
 
 </code></pre><ol start="8">
 <li>
-<p>find - find a file in the path mentioned .First example is finding the file with name file1 in /(root). In second example find will only look in /home/linux directory</p>
+<p>find - finds the file/s in the path mentioned .First example is finding the file with name file1 in /(root). In second example find will only look in /home/linux directory</p>
 <pre><code>localhost:/home/linux/testfolder # find / -name file1
 /home/linux/testfolder/file1
 /home/linux/file1
@@ -475,26 +468,25 @@ total 0
 localhost:/home/linux/testfolder # find /home/linux -name file2
 /home/linux/file2
 /home/linux/testfolder/file2
-   
-   
+     
 </code></pre></li>
 <li>
-<p>cp - copy or replace files</p>
+<p>cp - copy or replace files in the current directory</p>
 <ul>
 <li>i : used for reconfirmation</li>
 </ul>
 </li>
 <li>
-<p>rm - remove</p>
+<p>rm - remove the files are folders. Like cp commond &ldquo;i&rdquo; is used for reconfirmation.</p>
 </li>
 <li>
-<p>rmdir - remove empty directory</p>
+<p>rmdir - Removes an empty directory.</p>
 </li>
 <li>
-<p>mkdir - make a new directory</p>
+<p>mkdir - Cretes  a new directory.</p>
 </li>
 <li>
-<p>mv - rename / move files</p>
+<p>mv - rename / move files .</p>
 </li>
 </ol>
 <pre><code>localhost:/home/linux/testfolder # cp file1 file2
@@ -552,7 +544,7 @@ testfolder2/file2
 
 </code></pre><ol start="14">
 <li>
-<p>passwd - change password of current logged in user . Only root can change the password of other users. password username is used to change password for user &ldquo;username&rdquo;</p>
+<p>passwd - Change the password of current logged in user . Only root can change the password of other users. password username is used to change password for user &ldquo;username&rdquo;</p>
 </li>
 <li>
 <p>head - display first 10 lines of a file;  &ldquo;-&rdquo; is used to filter the number of lines to be displayed .</p>
@@ -595,10 +587,10 @@ testuser:x:1001:100::/home/testuser:/bin/bash
 
 </code></pre><ol start="17">
 <li>
-<p>more / less - display content of a file in pages . less is comparably faster than more; as more command  load the entire file where as less will load the files partially . Enter key is used for next line and space bar is used to display the next page .</p>
+<p>more / less - Display content of a file in pages, it is useful while reading man pages or log files. less command is comparably faster than more; as more command loads the entire file to memory where as less will load the files partially . Enter key is used to navigate to next line and space bar is for next page .</p>
 </li>
 <li>
-<p>history - Prints the commands history . &ldquo;!!&rdquo; - runs the previous command . &ldquo;!2&rdquo; runs the second command in the history</p>
+<p>history - Prints the commands history . &ldquo;!!&rdquo; - runs the previous command . &ldquo;!2&rdquo; runs the second command in the history. &ldquo;echo $HISTFILE&rdquo; prints the location of history file for root user .</p>
 </li>
 <li>
 <p>tab key - auto fill the commend / file name . Double tab is to disapply all the files matching the criteria.</p>
