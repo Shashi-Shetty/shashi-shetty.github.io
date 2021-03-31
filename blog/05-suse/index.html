@@ -8,8 +8,8 @@
 
 <meta name="generator" content="Hugo 0.82.0" /><meta property="og:site_name" content="about-virtualization.com">
   <meta property="og:title" content="Linux Basic commands">
-  <meta property="og:description" content="List of basic linux commands.">
-  <meta property="description" content="List of basic linux commands.">
+  <meta property="og:description" content="List of basic Linux commands.">
+  <meta property="description" content="List of basic Linux commands.">
   <meta property="og:url" content="/blog/05-suse/">
   <meta property="og:type" content="article">
   
@@ -234,7 +234,7 @@
       <h2><a href="/blog/05-suse/">Linux Basic commands</a></h2>
     
     
-      <p>List of basic linux commands.</p>
+      <p>List of basic Linux commands.</p>
     
   </div>
   <div class="meta">
@@ -294,23 +294,23 @@
     <img src="/img/2021/03/banner5.jpg" alt="">
   </a>
       <h1 id="suse-linux"><strong>SUSE Linux</strong></h1>
-<p>This article covers the pointers for setting up the linux test VM on home computer and basic Linux commands and their usage.</p>
-<p>Pointers for settings up the SUSE Linux in your home system</p>
+<p>This article covers the pointers for setting up the Linux test VM on the home computer and basic Linux commands and their usage.</p>
+<p>Pointers for settings up the SUSE Linux in your home system are</p>
 <ul>
 <li>
-<p>Install Hyper V on your Windows 10 system</p>
+<p>Use existing Hyper V feature on your Windows 10 system rather than a third party tool like virtual box / vmware player.</p>
 </li>
 <li>
 <p>Create an account for the SUSE Linux portal</p>
 </li>
 <li>
-<p>Download the ISO and generate the registration code on the SUSE portal</p>
+<p>Download the ISO and generate the registration code from the SUSE portal</p>
 </li>
 <li>
 <p>While configuring the Linux guest, use the default virtual switch on hyper v , which would enable internet access on your guest OS</p>
 </li>
 <li>
-<p>To enable SSH, add the rule in the guest VM and restart the firewall service</p>
+<p>To enable SSH, add the rule in the guest suse VM and restart the firewall service</p>
 <ul>
 <li>sudo firewall-cmd &ndash;permanent &ndash;add-service=ssh</li>
 <li>sudo firewall-cmd &ndash;reload</li>
@@ -351,14 +351,14 @@ linux@localhost:/etc&gt; cd -
    
 </code></pre></li>
 <li>
-<p>touch - Create an empty file . You can create more than one file in a single .</p>
+<p>touch - Create an empty file . You can create more than one file by separating the names of files by space.</p>
 </li>
 <li>
-<p>ls - lists the files and folders in the current directory . &ldquo;.&rdquo; reffers to current folder and &ldquo;..&rdquo; refers to parent folder. Below are some of the commonly uses options for ls command.</p>
+<p>ls - lists the files and folders in the current directory. &ldquo;.&rdquo; refers to the current folder, and &ldquo;..&rdquo; refers to the parent folder. Below are some of the common use options for the ls command.</p>
 <ul>
 <li>lt - newest files are displayed first</li>
 <li>lr - newest files are displayed at the last</li>
-<li>lh - display the size of files in human readable format</li>
+<li>lh - display the size of files in human-readable format</li>
 </ul>
 </li>
 </ol>
@@ -587,13 +587,13 @@ testuser:x:1001:100::/home/testuser:/bin/bash
 
 </code></pre><ol start="17">
 <li>
-<p>more / less - Display content of a file in pages, it is useful while reading man pages or log files. less command is comparably faster than more; as more command loads the entire file to memory where as less will load the files partially . Enter key is used to navigate to next line and space bar is for next page .</p>
+<p>more / less - Display content of a file in pages; one everyday use case is reading man pages or log files. less command is comparably faster than more, as more command loads the entire file to memory where as less will load the files partially . Enter key is used to navigate to next line and space bar is for next page .</p>
 </li>
 <li>
 <p>history - Prints the commands history . &ldquo;!!&rdquo; - runs the previous command . &ldquo;!2&rdquo; runs the second command in the history. &ldquo;echo $HISTFILE&rdquo; prints the location of history file for root user .</p>
 </li>
 <li>
-<p>tab key - auto fill the commend / file name . Double tab is to disapply all the files matching the criteria.</p>
+<p>tab key - Auto fills the command/file name. Double tab is to disapply all the files matching the criteria.</p>
 </li>
 </ol>
 
