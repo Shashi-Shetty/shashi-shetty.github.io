@@ -6,7 +6,21 @@
     <description>Recent content on about-virtualization.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Basic commands</title>
+      <link>/blog/05-suse/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/05-suse/</guid>
+      <description>SUSE Linux This article covers the pointers for setting up the linux test VM on home computer and basic Linux commands and their usage.
+Pointers for settings up the SUSE Linux in your home system
+  Install Hyper V on your Windows 10 system
+  Create an account for the SUSE Linux portal
+  Download the ISO and generate the registration code on the SUSE portal
+  While configuring the Linux guest, use the default virtual switch on hyper v , which would enable internet access on your guest OS</description>
+    </item>
+    
     <item>
       <title>Azure Security - Part 2</title>
       <link>/blog/04securitycenter/</link>
